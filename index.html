@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Password Manager Pro</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="navbar">
+    <span>🔐 PassManager</span>
+    <div>
+        <button onclick="toggleTheme()">🌓</button>
+        <button onclick="logout()">🚪</button>
+    </div>
+</div>
+
+<div class="container">
+
+<h2>Secure Manager</h2>
+
+<div id="login">
+    <input type="password" id="master" placeholder="Master Password">
+    <button onclick="login()">دخول</button>
+</div>
+
+<div id="app" style="display:none;">
+    <input id="search" placeholder="🔍 بحث..." oninput="searchData()">
+
+    <input id="site" placeholder="Site">
+    <input id="username" placeholder="Username">
+    <input id="password" placeholder="Password">
+
+    <button onclick="generatePassword()">🔑 توليد كلمة سر</button>
+    <button onclick="save()">💾 حفظ</button>
+
+    <div id="list"></div>
+</div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
